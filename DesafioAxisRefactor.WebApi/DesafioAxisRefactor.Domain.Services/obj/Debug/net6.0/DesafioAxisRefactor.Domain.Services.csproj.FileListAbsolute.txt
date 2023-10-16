@@ -1,0 +1,15 @@
+C:\Users\gutin\OneDrive\Documentos\_dev\DesafioAxisRefactor\DesafioAxisRefactor.WebApi\DesafioAxisRefactor.Domain.Services\bin\Debug\net6.0\DesafioAxisRefactor.Domain.Services.deps.json
+C:\Users\gutin\OneDrive\Documentos\_dev\DesafioAxisRefactor\DesafioAxisRefactor.WebApi\DesafioAxisRefactor.Domain.Services\bin\Debug\net6.0\DesafioAxisRefactor.Domain.Services.dll
+C:\Users\gutin\OneDrive\Documentos\_dev\DesafioAxisRefactor\DesafioAxisRefactor.WebApi\DesafioAxisRefactor.Domain.Services\bin\Debug\net6.0\DesafioAxisRefactor.Domain.Services.pdb
+C:\Users\gutin\OneDrive\Documentos\_dev\DesafioAxisRefactor\DesafioAxisRefactor.WebApi\DesafioAxisRefactor.Domain.Services\bin\Debug\net6.0\DesafioAxisRefactor.Domain.dll
+C:\Users\gutin\OneDrive\Documentos\_dev\DesafioAxisRefactor\DesafioAxisRefactor.WebApi\DesafioAxisRefactor.Domain.Services\bin\Debug\net6.0\DesafioAxisRefactor.Domain.pdb
+C:\Users\gutin\OneDrive\Documentos\_dev\DesafioAxisRefactor\DesafioAxisRefactor.WebApi\DesafioAxisRefactor.Domain.Services\obj\Debug\net6.0\DesafioAxisRefactor.Domain.Services.csproj.AssemblyReference.cache
+C:\Users\gutin\OneDrive\Documentos\_dev\DesafioAxisRefactor\DesafioAxisRefactor.WebApi\DesafioAxisRefactor.Domain.Services\obj\Debug\net6.0\DesafioAxisRefactor.Domain.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gutin\OneDrive\Documentos\_dev\DesafioAxisRefactor\DesafioAxisRefactor.WebApi\DesafioAxisRefactor.Domain.Services\obj\Debug\net6.0\DesafioAxisRefactor.Domain.Services.AssemblyInfoInputs.cache
+C:\Users\gutin\OneDrive\Documentos\_dev\DesafioAxisRefactor\DesafioAxisRefactor.WebApi\DesafioAxisRefactor.Domain.Services\obj\Debug\net6.0\DesafioAxisRefactor.Domain.Services.AssemblyInfo.cs
+C:\Users\gutin\OneDrive\Documentos\_dev\DesafioAxisRefactor\DesafioAxisRefactor.WebApi\DesafioAxisRefactor.Domain.Services\obj\Debug\net6.0\DesafioAxisRefactor.Domain.Services.csproj.CoreCompileInputs.cache
+C:\Users\gutin\OneDrive\Documentos\_dev\DesafioAxisRefactor\DesafioAxisRefactor.WebApi\DesafioAxisRefactor.Domain.Services\obj\Debug\net6.0\DesafioAxisRefactor.Domain.Services.csproj.CopyComplete
+C:\Users\gutin\OneDrive\Documentos\_dev\DesafioAxisRefactor\DesafioAxisRefactor.WebApi\DesafioAxisRefactor.Domain.Services\obj\Debug\net6.0\DesafioAxisRefactor.Domain.Services.dll
+C:\Users\gutin\OneDrive\Documentos\_dev\DesafioAxisRefactor\DesafioAxisRefactor.WebApi\DesafioAxisRefactor.Domain.Services\obj\Debug\net6.0\refint\DesafioAxisRefactor.Domain.Services.dll
+C:\Users\gutin\OneDrive\Documentos\_dev\DesafioAxisRefactor\DesafioAxisRefactor.WebApi\DesafioAxisRefactor.Domain.Services\obj\Debug\net6.0\DesafioAxisRefactor.Domain.Services.pdb
+C:\Users\gutin\OneDrive\Documentos\_dev\DesafioAxisRefactor\DesafioAxisRefactor.WebApi\DesafioAxisRefactor.Domain.Services\obj\Debug\net6.0\ref\DesafioAxisRefactor.Domain.Services.dll

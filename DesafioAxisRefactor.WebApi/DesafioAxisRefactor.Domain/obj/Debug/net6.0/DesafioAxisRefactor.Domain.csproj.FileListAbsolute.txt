@@ -1,0 +1,12 @@
+C:\Users\gutin\OneDrive\Documentos\_dev\DesafioAxisRefactor\DesafioAxisRefactor.WebApi\DesafioAxisRefactor.Domain\bin\Debug\net6.0\DesafioAxisRefactor.Domain.deps.json
+C:\Users\gutin\OneDrive\Documentos\_dev\DesafioAxisRefactor\DesafioAxisRefactor.WebApi\DesafioAxisRefactor.Domain\bin\Debug\net6.0\DesafioAxisRefactor.Domain.dll
+C:\Users\gutin\OneDrive\Documentos\_dev\DesafioAxisRefactor\DesafioAxisRefactor.WebApi\DesafioAxisRefactor.Domain\bin\Debug\net6.0\DesafioAxisRefactor.Domain.pdb
+C:\Users\gutin\OneDrive\Documentos\_dev\DesafioAxisRefactor\DesafioAxisRefactor.WebApi\DesafioAxisRefactor.Domain\obj\Debug\net6.0\DesafioAxisRefactor.Domain.csproj.AssemblyReference.cache
+C:\Users\gutin\OneDrive\Documentos\_dev\DesafioAxisRefactor\DesafioAxisRefactor.WebApi\DesafioAxisRefactor.Domain\obj\Debug\net6.0\DesafioAxisRefactor.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gutin\OneDrive\Documentos\_dev\DesafioAxisRefactor\DesafioAxisRefactor.WebApi\DesafioAxisRefactor.Domain\obj\Debug\net6.0\DesafioAxisRefactor.Domain.AssemblyInfoInputs.cache
+C:\Users\gutin\OneDrive\Documentos\_dev\DesafioAxisRefactor\DesafioAxisRefactor.WebApi\DesafioAxisRefactor.Domain\obj\Debug\net6.0\DesafioAxisRefactor.Domain.AssemblyInfo.cs
+C:\Users\gutin\OneDrive\Documentos\_dev\DesafioAxisRefactor\DesafioAxisRefactor.WebApi\DesafioAxisRefactor.Domain\obj\Debug\net6.0\DesafioAxisRefactor.Domain.csproj.CoreCompileInputs.cache
+C:\Users\gutin\OneDrive\Documentos\_dev\DesafioAxisRefactor\DesafioAxisRefactor.WebApi\DesafioAxisRefactor.Domain\obj\Debug\net6.0\DesafioAxisRefactor.Domain.dll
+C:\Users\gutin\OneDrive\Documentos\_dev\DesafioAxisRefactor\DesafioAxisRefactor.WebApi\DesafioAxisRefactor.Domain\obj\Debug\net6.0\refint\DesafioAxisRefactor.Domain.dll
+C:\Users\gutin\OneDrive\Documentos\_dev\DesafioAxisRefactor\DesafioAxisRefactor.WebApi\DesafioAxisRefactor.Domain\obj\Debug\net6.0\DesafioAxisRefactor.Domain.pdb
+C:\Users\gutin\OneDrive\Documentos\_dev\DesafioAxisRefactor\DesafioAxisRefactor.WebApi\DesafioAxisRefactor.Domain\obj\Debug\net6.0\ref\DesafioAxisRefactor.Domain.dll
