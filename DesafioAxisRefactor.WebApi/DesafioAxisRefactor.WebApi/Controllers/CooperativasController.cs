@@ -1,6 +1,9 @@
-﻿using DesafioAxisRefactor.Domain.Models;
+﻿using DesafioAxisRefactor.Domain.DataTransaferes;
+using DesafioAxisRefactor.Domain.Interfaces.Repositories;
+using DesafioAxisRefactor.Domain.Models;
 using DesafioAxisRefactor.Domain.Services.Interfaces;
 using DesafioAxisRefactor.Infrastructure.Data.Context;
+using DesafioAxisRefactor.WebApi.Utils;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,29 +13,30 @@ namespace DesafioAxisRefactor.WebApi.Controllers
     [ApiController]
     public class CooperativasController : ControllerBase
     {
-        private readonly DesafioAxisRefactorContext _context;
         private readonly ICooperativaValidation _validation;
-        public CooperativasController(DesafioAxisRefactorContext context, ICooperativaValidation validation)
+        private readonly ICooperativaRepository _repository;
+        public CooperativasController(ICooperativaValidation validation, ICooperativaRepository repository)
         {
-            _context = context;
             _validation = validation;
+            _repository = repository;
         }
 
         [HttpGet]
-        public async Task<ActionResult> GetCoperativas()
+        public async Task<ActionResult> GetAllCoperativas()
         {
             try
             {
-                List<Cooperativas> res = await _context.Cooperativas.ToListAsync();
-                int tam = res.Count();
+                List<Cooperativa> cooperativas = await _repository.GetAllCoperativas();
+                int tam = cooperativas.Count();
 
                 return Ok(new
                 {
-                    data = res,
+                    data = cooperativas,
                     success = true,
                     message = tam + " itens retornados"
                 });
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 return BadRequest(new
                 {
@@ -43,12 +47,32 @@ namespace DesafioAxisRefactor.WebApi.Controllers
             }
         }
 
+        //[HttpGet("id")]
+        //public Task<ActionResult> GetCooperadoById([FromRoute] int id)
+        //{
+         
+        //        Cooperativa cooperativa =  _repository.GetCoperativaById(id);
+        //    if(cooperativa != null)
+        //    {
+        //        return Ok();
+        //    }
+        //    else
+        //    {
+        //        return BadRequest(new
+        //        {
+        //            data = ex.Data,
+        //            success = false,
+        //            message = ex.Message
+        //        });
+        //    }
+        //}
+
         [HttpPost]
-        public async Task<ActionResult> CreateCooperativas(Cooperativas cooperativas)
+        public async Task<ActionResult> CreateCooperativas(CreateCooperativaDataTransfer cooperativa)
         {
             try
             {
-                bool isValid = _validation.RequestBodyValidation(cooperativas);
+                bool isValid = _validation.RequestBodyValidation(cooperativa);
                 if (!isValid)
                 {
                     return BadRequest(new
@@ -57,16 +81,54 @@ namespace DesafioAxisRefactor.WebApi.Controllers
                         message = "Foi encontrado um erro de validação"
                     });
                 }
-                await _context.Cooperativas.AddAsync(cooperativas);
-                await _context.SaveChangesAsync();
+
+               await _repository.CreateCooperativa(cooperativa);
 
                 return Ok(new
                 {
-                    data = cooperativas,
+                    data = cooperativa,
                     success = true,
                     message = "Item criado com sucesso!"
                 });
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new
+                {
+                    data = ex.Data,
+                    success = false,
+                    message = ex.Message
+                });
+            }
+
+
+        }
+
+        [HttpPost("{idCooperativa}/Create-cooperado")]
+        public async Task<ActionResult> CreateCooperadoByCooperativa([FromRoute] int idCooperativa, CreateCooperadoDataTransfer cooperado)
+        {
+            try
+            {
+                //bool isValid = _validation.RequestBodyValidation(cooperativa);
+                //if (!isValid)
+                //{
+                    //return BadRequest(new
+                    //{
+                    //    success = false,
+                    //    message = "Foi encontrado um erro de validação"
+                    //});
+                //}
+
+                await _repository.CreateCooperadoByCooperativa(idCooperativa, cooperado);
+
+                return Ok(new
+                {
+                    data = cooperado,
+                    success = true,
+                    message = "Item criado com sucesso!"
+                });
+            }
+            catch (Exception ex)
             {
                 return BadRequest(new
                 {

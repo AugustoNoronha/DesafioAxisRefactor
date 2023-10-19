@@ -21,7 +21,56 @@ namespace DesafioAxisRefactor.Infrastructure.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("DesafioAxisRefactor.Domain.Models.Cooperativas", b =>
+            modelBuilder.Entity("DesafioAxisRefactor.Domain.Models.Cooperado", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ContaCorrente")
+                        .IsRequired()
+                        .HasMaxLength(12)
+                        .HasColumnType("character varying(12)")
+                        .HasColumnName("account_number");
+
+                    b.Property<int>("CooperativaId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(40)
+                        .HasColumnType("character varying(40)")
+                        .HasColumnName("name");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CooperativaId");
+
+                    b.ToTable("cooperado", "dbo");
+                });
+
+            modelBuilder.Entity("DesafioAxisRefactor.Domain.Models.Cooperativa", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(250)
+                        .HasColumnType("character varying(250)")
+                        .HasColumnName("descripition");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("cooperativas", "dbo");
+                });
+
+            modelBuilder.Entity("DesafioAxisRefactor.Domain.Models.Favorito", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -29,14 +78,63 @@ namespace DesafioAxisRefactor.Infrastructure.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
 
-                    b.Property<string>("Description")
+                    b.Property<int>("CooperadoId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(80)
-                        .HasColumnType("VARCHAR");
+                        .HasMaxLength(40)
+                        .HasColumnType("character varying(40)")
+                        .HasColumnName("name");
+
+                    b.Property<string>("PixKey")
+                        .IsRequired()
+                        .HasMaxLength(40)
+                        .HasColumnType("character varying(40)")
+                        .HasColumnName("pix_key");
+
+                    b.Property<int>("PixType")
+                        .HasMaxLength(2)
+                        .HasColumnType("integer")
+                        .HasColumnName("pix_type");
 
                     b.HasKey("Id");
 
-                    b.ToTable("cooperativas");
+                    b.HasIndex("CooperadoId");
+
+                    b.ToTable("favoritos", "dbo");
+                });
+
+            modelBuilder.Entity("DesafioAxisRefactor.Domain.Models.Cooperado", b =>
+                {
+                    b.HasOne("DesafioAxisRefactor.Domain.Models.Cooperativa", "Cooperativa")
+                        .WithMany("Cooperados")
+                        .HasForeignKey("CooperativaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Cooperativa");
+                });
+
+            modelBuilder.Entity("DesafioAxisRefactor.Domain.Models.Favorito", b =>
+                {
+                    b.HasOne("DesafioAxisRefactor.Domain.Models.Cooperado", "Cooperado")
+                        .WithMany("Favoritos")
+                        .HasForeignKey("CooperadoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Cooperado");
+                });
+
+            modelBuilder.Entity("DesafioAxisRefactor.Domain.Models.Cooperado", b =>
+                {
+                    b.Navigation("Favoritos");
+                });
+
+            modelBuilder.Entity("DesafioAxisRefactor.Domain.Models.Cooperativa", b =>
+                {
+                    b.Navigation("Cooperados");
                 });
 #pragma warning restore 612, 618
         }

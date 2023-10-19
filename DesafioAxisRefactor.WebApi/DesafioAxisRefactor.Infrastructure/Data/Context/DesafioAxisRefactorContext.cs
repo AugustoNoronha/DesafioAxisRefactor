@@ -15,10 +15,15 @@ namespace DesafioAxisRefactor.Infrastructure.Data.Context
 
         }
 
-        //public DbSet<Cooperador> Cooperadores { get; set; }
-        public DbSet<Cooperativas> Cooperativas { get; set; }
-        //public DbSet<Favorito> Favoritos { get; set; }
+        public DbSet<Cooperado> Cooperados { get; set; }
+        public DbSet<Cooperativa> Cooperativas { get; set; }
+        public DbSet<Favorito> Favoritos { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(DesafioAxisRefactorContext).Assembly);
+            base.OnModelCreating(modelBuilder);
+        }
 
     }
 }

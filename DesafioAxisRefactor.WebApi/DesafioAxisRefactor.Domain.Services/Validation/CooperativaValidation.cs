@@ -1,4 +1,5 @@
-﻿using DesafioAxisRefactor.Domain.Models;
+﻿using DesafioAxisRefactor.Domain.DataTransaferes;
+using DesafioAxisRefactor.Domain.Models;
 using DesafioAxisRefactor.Domain.Services.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -10,9 +11,9 @@ namespace DesafioAxisRefactor.Domain.Services.Validation
 {
     public class CooperativaValidation : ICooperativaValidation
     {
-        public bool RequestBodyValidation(Cooperativas cooperativa)
+        public bool RequestBodyValidation(CreateCooperativaDataTransfer cooperativa)
         {
-            if(cooperativa.Description == null || cooperativa.Description == "" || cooperativa.Description == "string")
+            if (cooperativa.Description == null || cooperativa.Description == "" || cooperativa.Description == "string")
             {
                 return false;
             }

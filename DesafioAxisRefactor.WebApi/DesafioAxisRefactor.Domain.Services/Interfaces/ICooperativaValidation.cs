@@ -1,4 +1,5 @@
-﻿using DesafioAxisRefactor.Domain.Models;
+﻿using DesafioAxisRefactor.Domain.DataTransaferes;
+using DesafioAxisRefactor.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,6 @@ namespace DesafioAxisRefactor.Domain.Services.Interfaces
 {
     public interface ICooperativaValidation
     {
-        public bool RequestBodyValidation(Cooperativas cooperativa);
+        public bool RequestBodyValidation(CreateCooperativaDataTransfer cooperativa);
     }
 }
